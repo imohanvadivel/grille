@@ -1,0 +1,20 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts":{
+    "build": "./build.sh build",
+    "watch": "./build.sh watch"
+  },
+  "keywords": [ "html", "css", "grid", "web"],
+  "author": "Mohan Vadivel <https://mohanvadivel.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.15",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6"
+  }
+}

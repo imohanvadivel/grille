@@ -1,0 +1,142 @@
+
+/* root
+============================================== */
+
+:root {
+  --baseSansFontSize: 14;
+  --baseMonoFontSize: 14;
+
+  --sansFont: "Inter", sans-serif;
+  --monoFont: "JetBrains Mono", "Roboto Mono", monospace;
+
+  --sansFontSize: calc(var(--baseSansFontSize) * 1rem / 16);
+  --monoFontSize: calc(var(--baseMonoFontSize) * 1rem / var(--baseSansFontSize));
+  
+  /*baseUnit (aka lineheight) is used as the base value for all spacing*/
+  --baseUnit: calc(1rem + (1px * (var(--baseSansFontSize) * 1.5 - var(--baseSansFontSize))));
+  --baseline: calc(var(--baseUnit) / 2);
+
+
+  /* spacing around blocks */
+  --blockSpacingTop: 0px;
+  --blockSpacingBottom: var(--baseUnit);
+
+  /* colors */
+  --foregroundColor-rgb: 0,0,0;
+  --foregroundColor-a: 1;
+  --foregroundColor: rgba(var(--foregroundColor-rgb),var(--foregroundColor-a));
+  --backgroundColor: rgb(255, 255, 255);
+  --backgroundScrim: #fafafa;
+  --red:    rgb(238, 39, 17);
+  --blue:   rgb(24, 113, 233);
+  --green:  rgb(18, 192, 91);
+  --yellow: rgb(249, 191, 15);
+  --red-rgb:   238, 39, 17;
+  --blue-rgb:  24, 113, 233;
+  --green-rgb: 18, 192, 91;
+  --yellow-rgb:249, 191, 15;
+  --accentColor: var(--blue);
+
+  /* horizontal rule */
+  --hrThickness: 0.1428571429rem;
+  --hrColor:var(--foregroundColor);
+
+  /* heading size */
+  --h1-size: 2.8rem;
+  --h2-size: 2.2rem;
+  --h3-size: 1.4rem;
+  --h4-size: 1.1rem;
+
+  /* grid spacing */
+  --columnGap: calc(var(--baseUnit) * 2);
+  --rowGap: calc(var(--baseUnit));
+
+  /* display scale */
+  --displayScale: 1;
+  --pixel: 1px;
+
+  /* Body padding */
+  --bodyPadding: calc(var(--baseUnit) * 2);
+}
+
+/* Colors utility classes
+============================================== */
+
+.red    { color: var(--red) }
+.blue   { color: var(--blue) }
+.green  { color: var(--green) }
+.yellow { color: var(--yellow) }
+.bg-red    { backgroundColor: var(--red) }
+.bg-blue   { backgroundColor: var(--blue) }
+.bg-green  { backgroundColor: var(--green) }
+.bg-yellow { backgroundColor: var(--yellow) }
+
+
+/* DarkMode 
+============================================== */
+
+:root.dark{
+  --foregroundColor-rgb: 221,221,221;
+  --backgroundScrim: rgb(18, 18, 18);
+  --backgroundColor: rgb(25, 25, 25);
+  --depth1: rgb(30, 30, 30);
+  --depth2: rgb(35, 35, 35);
+  --depth3: rgb(39, 39, 39);
+  --hrColor: rgba(255,255,255,.4);
+  --blue: rgb(154, 201, 254);
+
+}
+.depth1 { --backgroundColor: var(--depth1) }
+.depth2 { --backgroundColor: var(--depth2) }
+.depth3 { --backgroundColor: var(--depth3) }
+
+
+html {
+  font-family: var(--sansFont);
+  font-size:   var(--sansFontSize);
+  line-height: var(--baseUnit);
+  color:       var(--foregroundColor);
+  background: var(--backgroundScrim);
+  letter-spacing: -0.01em;
+  text-size-adjust: 100%;
+  font-variant-ligatures: contextual common-ligatures;
+  font-feature-settings:'kern' 1, 'liga' 1, 'calt' 1, 'cv10' 1;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding: var(--bodyPadding);
+  padding-bottom: calc(var(--baseUnit) * 3);
+  min-height: 100vh;
+  /* max-width: calc(110rem); */
+  max-width: 1540px;
+  margin: 0 auto;
+  background: var(--backgroundColor);
+}
+::selection{
+  backgroundColor: var(--foregroundColor);
+  color: var(--backgroundColor);
+}
+
+@media only screen and (max-width: 600px){ /*600px*/
+  body{
+    --bodyPadding: var(--baseUnit);
+    padding-bottom: calc(var(--baseUnit) * 2);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) { :root {
+  --displayScale: 2;
+  --pixel: 0.5px;
+}}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5), only screen and (min-resolution: 2.5dppx) { :root {
+  --displayScale: 3;
+  --pixel: 0.34px;
+}}
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5), only screen and (min-device-pixel-ratio: 3.5), only screen and (min-resolution: 3.5dppx) { :root {
+  --displayScale: 4;
+  --pixel: 0.25px;
+}}
+
