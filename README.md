@@ -1,12 +1,33 @@
-# Grid
-Grid is a simple CSS Grid system for building flexible web applications. Grid doesn't involve any javascript. <br/>Grid can be used along with any javascript framework.
+# Grille
+Grille is a simple CSS Grid system for building flexible web applications. Grille is pure CSS doesn't involve any javascript. Grille can be used along with any javascript framework. This project is a fork of [Raster](https://github.com/rsms/raster) with simpler semantic syntax and some additional features.
 
 > Note: This documentation is WIP
 
+## Install
+
+This repository is distributed with npm and yarn. You can get this repo by
+
+```bash
+npm install grilles 
+```
+
+After installation, you can import ```grille.css``` in your main CSS file
+
+```css
+@import "grilles/grille.css";
+```
+
+You can also get ```grille.css``` directly from cdn by using this `link` tag
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/grilles@1.x/grille.css">
+```
+
+
 ## Grid
 
-Adding the ```grid``` class to an element makes them a grid container. By default, the grid container has ```4``` columns. <br/>
-The ```columns="<count>"``` attribute can be used to specify the number of columns.
+Adding the ```grid``` class to an element makes them a grid container. By default, the grid container has ```4``` columns. <br />
+The ```columns="<count>"``` attribute can be used to specify column count. At maximum ```30``` columns can be created. 
 
 For example, to make an 8 column grid, the following markup can be used.
 
@@ -15,7 +36,7 @@ For example, to make an 8 column grid, the following markup can be used.
   ...
 </main>
 ```
-Maximum of ```30``` columns can be created. All the immediate children of the grid container act as the grid child. The following strategies can be used to position them.
+All the immediate children of the grid container act as the grid child. The following strategies can be used to position them.
 
 ### Positioning Grid Child
 - ```span="row"``` spans across the entire row <br/>
@@ -46,7 +67,7 @@ for example, the template for a simple blog may look like
 </main>
 ```
 ## Fonts
-Grid comes with a great set of fonts that are designed explicitly for user interfaces. They work well even in low-resolution displays. They are licensed under "SIL Open Font License" and served through [Google font API](https://developers.google.com/fonts/docs/css2).
+Grille comes with a great set of fonts that are designed explicitly for user interfaces. They work well even in low-resolution displays. They are licensed under "SIL Open Font License" and served through [Google font API](https://developers.google.com/fonts/docs/css2).
 
 ```
 Sans Font → Inter
