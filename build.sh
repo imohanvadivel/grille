@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="/* Grille V1.0.1 */\n\n"
+version="/* Grille V1.0.2 */\n\n"
 postcss="./node_modules/.bin/postcss"
 
 
