@@ -105,3 +105,9 @@ body.debug grid > * {
   box-shadow: inset 0px 0px 0px var(--wireWeight) var(--debugBlue8),
               0px 0px 0px var(--wireWeight) var(--debugBlue8);
 }
+
+/* Blur 
+=====================================================*/
+body.blur {
+  filter: blur(2.5px);
+}
