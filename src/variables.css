@@ -12,10 +12,11 @@
   --sansFontSize: calc(var(--baseSansFontSize) * 1rem / 16);
   --monoFontSize: calc(var(--baseMonoFontSize) * 1rem / var(--baseSansFontSize));
   
-  /*baseUnit (aka lineheight) is used as the base value for all spacing*/
+  /*baseUnit is used as the base value for all spacing*/
   --baseUnit: calc(1rem + (1px * (var(--baseSansFontSize) * 1.5 - var(--baseSansFontSize))));
   --baseline: calc(var(--baseUnit) / 2);
 
+  --lineHeight:  1.5;
 
   /* spacing around blocks */
   --blockSpacingTop: 0px;
@@ -94,7 +95,7 @@
 html {
   font-family: var(--sansFont);
   font-size:   var(--sansFontSize);
-  line-height: var(--baseUnit);
+  line-height: var(--lineHeight);
   color:       var(--foregroundColor);
   background: var(--backgroundScrim);
   letter-spacing: -0.01em;
