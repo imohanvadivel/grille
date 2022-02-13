@@ -117,7 +117,7 @@ body {
   background: var(--backgroundColor);
 }
 ::selection{
-  backgroundColor: var(--foregroundColor);
+  background-color: var(--foregroundColor);
   color: var(--backgroundColor);
 }
 
