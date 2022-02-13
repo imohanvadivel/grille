@@ -258,6 +258,11 @@ a.plain{
   color: inherit;
 }
 
+a.plain:active{
+  background: unset;
+  color: unset;
+}
+
 /* image
 ============================================== */
 img, img:first-child, img:last-child {
