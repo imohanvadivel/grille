@@ -67,10 +67,10 @@
 .blue   { color: var(--blue) }
 .green  { color: var(--green) }
 .yellow { color: var(--yellow) }
-.bg-red    { backgroundColor: var(--red) }
-.bg-blue   { backgroundColor: var(--blue) }
-.bg-green  { backgroundColor: var(--green) }
-.bg-yellow { backgroundColor: var(--yellow) }
+.bg-red    { background-color: var(--red) }
+.bg-blue   { background-color: var(--blue) }
+.bg-green  { background-color: var(--green) }
+.bg-yellow { background-color: var(--yellow) }
 
 
 /* DarkMode 

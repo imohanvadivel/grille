@@ -1,10 +1,16 @@
 {
   "name": "grilles",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Simple CSS Grid system",
   "license": "MIT",
   "author": "Mohan Vadivel <https://mohanvadivel.com>",
-  "keywords": [ "html", "css", "layout", "grid", "web"],
+  "keywords": [
+    "html",
+    "css",
+    "layout",
+    "grid",
+    "web"
+  ],
   "homepage": "https://github.com/imohanvadivel/grille#readme",
   "repository": {
     "type": "git",
@@ -13,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/imohanvadivel/grille/issues"
   },
-  "scripts":{
+  "scripts": {
     "build": "./build.sh build",
     "watch": "./build.sh watch"
   },
